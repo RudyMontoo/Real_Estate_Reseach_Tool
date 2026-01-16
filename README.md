@@ -151,12 +151,4 @@ Star ⭐ the repository and feel free to fork or contribute.
 
 ---
 
-### Next Steps
 
-If you want, I can also add:
-- 📸 **Screenshots** section
-- 📦 **requirements.txt** template
-- 🎨 **Architecture diagram** image placeholder
-- 🎯 Tailor README for **recruiters vs engineers**
-
-Just let me know! 👍
