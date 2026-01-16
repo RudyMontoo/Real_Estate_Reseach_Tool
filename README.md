@@ -28,7 +28,7 @@ Most real-world news sites:
 - Block bots and static HTTP requests
 
 Traditional loaders often ingest:
-- “Enable JavaScript” pages
+- "Enable JavaScript" pages
 - Access denied HTML
 - Navigation noise instead of real content
 
@@ -37,24 +37,26 @@ Traditional loaders often ingest:
 ---
 
 ## 🏗️ Architecture Overview
-Web Articles (CNBC, etc.)
-↓
-Playwright (Headless Browser)
-↓
-Clean Text Extraction
-↓
-Text Chunking
-↓
-Embeddings (HuggingFace)
-↓
-Chroma Vector Database
-↓
-Retriever
-↓
-LLM (Groq)
-↓
-Grounded Answer + Sources
 
+```
+Web Articles (CNBC, etc.)
+        ↓
+Playwright (Headless Browser)
+        ↓
+Clean Text Extraction
+        ↓
+Text Chunking
+        ↓
+Embeddings (HuggingFace)
+        ↓
+Chroma Vector Database
+        ↓
+Retriever
+        ↓
+LLM (Groq)
+        ↓
+Grounded Answer + Sources
+```
 
 ---
 
@@ -72,31 +74,89 @@ Grounded Answer + Sources
 
 ## 📂 Project Structure
 
+```
 Real_Estate_Project/
-├── main.py # Streamlit UI
-├── rag.py # RAG pipeline (ingestion + retrieval + QA)
-├── resources/ # Vector store persistence (ignored in git)
+├── main.py              # Streamlit UI
+├── rag.py               # RAG pipeline (ingestion + retrieval + QA)
+├── resources/           # Vector store persistence (ignored in git)
 ├── .gitignore
 └── README.md
-
-
+```
 
 ---
 
-🔹 How to Run the Project
-1️⃣ Install Dependencies
+## ▶️ How to Run
+
+### 1️⃣ Install dependencies
+
+```bash
 pip install -r requirements.txt
 playwright install
+```
 
-2️⃣ Set Environment Variables
-Create a .env file in the project root:
+### 2️⃣ Set environment variables
+
+Create a `.env` file:
+
+```env
 GROQ_API_KEY=your_api_key_here
+```
 
-3️⃣ Run the Application
+### 3️⃣ Run the app
+
+```bash
 streamlit run main.py
-
-The app will start locally at:
-
-http://localhost:8501
+```
 
 ---
+
+## 🧪 Example Questions
+
+- Why did mortgage rates rise despite a Fed rate cut?
+- What was the 30-year fixed mortgage rate mentioned in the articles?
+- How does Federal Reserve policy impact mortgage rates?
+- Summarize key mortgage-related data points.
+
+---
+
+## 🔒 Best Practices Followed
+
+- No secrets committed (`.gitignore` enforced)
+- Browser-based ingestion for reliability
+- Context-bounded answers (no hallucination)
+- Clean separation of ingestion, storage, and querying
+
+---
+
+## 📌 Future Improvements
+
+- Auto-suggest questions from ingested documents
+- Streaming responses
+- Multi-source filtering
+- Document freshness scoring
+- Production deployment
+
+---
+
+## 👤 Author
+
+**Rudy Montoo**  
+Building production-grade AI systems with strong data foundations.
+
+---
+
+## ⭐ If you find this useful
+
+Star ⭐ the repository and feel free to fork or contribute.
+
+---
+
+### Next Steps
+
+If you want, I can also add:
+- 📸 **Screenshots** section
+- 📦 **requirements.txt** template
+- 🎨 **Architecture diagram** image placeholder
+- 🎯 Tailor README for **recruiters vs engineers**
+
+Just let me know! 👍
