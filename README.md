@@ -83,70 +83,20 @@ Real_Estate_Project/
 
 ---
 
-## ▶️ How to Run
-
-### 1️⃣ Install dependencies
-```bash
+🔹 How to Run the Project
+1️⃣ Install Dependencies
 pip install -r requirements.txt
 playwright install
-2️⃣ Set environment variables
 
-Create a .env file:
-
+2️⃣ Set Environment Variables
+Create a .env file in the project root:
 GROQ_API_KEY=your_api_key_here
 
-3️⃣ Run the app
+3️⃣ Run the Application
 streamlit run main.py
 
+The app will start locally at:
 
-🧪 Example Questions
-
-Why did mortgage rates rise despite a Fed rate cut?
-
-What was the 30-year fixed mortgage rate mentioned in the articles?
-
-How does Federal Reserve policy impact mortgage rates?
-
-Summarize key mortgage-related data points.
-
-🔒 Best Practices Followed
-
-No secrets committed (.gitignore enforced)
-
-Browser-based ingestion for reliability
-
-Context-bounded answers (no hallucination)
-
-Clean separation of ingestion, storage, and querying
-
-📌 Future Improvements
-
-Auto-suggest questions from ingested documents
-
-Streaming responses
-
-Multi-source filtering
-
-Document freshness scoring
-
-Production deployment
-
-
-
-👤 Author
-Rudy Montoo
-Building production-grade AI systems with strong data foundations.
-
-⭐ If you find this useful
-Star ⭐ the repository and feel free to fork or contribute.
+http://localhost:8501
 
 ---
-
-If you want, next I can:
-- add **screenshots** section
-- write a **requirements.txt**
-- add **architecture diagram image**
-- tailor README for **recruiters vs engineers**
-
-Just say 👍
-
